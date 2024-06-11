@@ -18,6 +18,12 @@
         {% endfor %}
     </ol>
 
+    <ol>
+        {% for alumno in alumnos %}
+           <li style="">{{alumno.rut}} - {{alumno}}</li>
+        {% endfor %}
+    </ol>
+
     <img src="{% static 'alumnos/img/descarga.jfif' %}" alt="">
 
 

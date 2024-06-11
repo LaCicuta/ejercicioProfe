@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from .models import Genero, Alumno
 
 # Create your views here.
 class persona:
@@ -13,6 +14,8 @@ def index(request):
 
     lista=["Lazaña", "Charquican", "Porotos granado"]
 
-    context={"hijo":hijo, "nombre":"Claudia Andrea", "comidas":lista}
+    alumnos = Alumno.objects.all()
+
+    context={"hijo":hijo, "nombre":"Claudia Andrea", "comidas":lista, "alumnos":alumnos}
 
     return render(request, 'alumnos/index.html', context)
